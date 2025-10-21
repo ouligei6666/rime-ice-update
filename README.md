@@ -6,7 +6,7 @@
 
 ### 1. `configure-rime-ice.sh` - Linux版本
 - **适用系统**: Linux (Ubuntu/Debian等)
-- **输入法框架**: ==ibus-rime== 注意：如果用户用的是fcitx5-rime，只能用`configure-rime-ice.sh`，且需要手动修改脚本中的rime设置路径，改成`$HOME/.local/share/fcitx5/rime/`，注释里有提示
+- **输入法框架**: **ibus-rime** 注意：如果用户用的是fcitx5-rime，只能用`configure-rime-ice.sh`，且需要手动修改脚本中的rime设置路径，改成`$HOME/.local/share/fcitx5/rime/`，注释里有提示
 - **配置目录**: `~/.config/ibus/rime/`
 
 ### 2. `configure-rime-ice-macos.sh` - macOS版本
