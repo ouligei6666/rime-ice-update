@@ -15,7 +15,7 @@ NC='\033[0m' # No Color
 
 # 配置变量
 RIME_ICE_REPO="https://gh-proxy.com/https://github.com/iDvel/rime-ice.git"
-RIME_CONFIG_DIR="$HOME/.config/ibus/rime" #如果是fcitx5用户改成$HOME/.local/share/fcitx5/rime
+RIME_CONFIG_DIR="$HOME/.config/ibus/rime" #如果是fcitx5，改成$HOME/.local/share/fcitx5/rime
 PROTECTED_FILES=("default.yaml" "squirrel.yaml" "weasel.yaml")
 TEMP_DIR="/tmp/rime-ice-temp"
 
