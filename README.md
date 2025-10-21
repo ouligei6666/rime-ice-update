@@ -2,11 +2,11 @@
 
 这是一套用于在不同操作系统上配置rime-ice输入法的自动化脚本集合。
 
-## 脚本列表
+## 一、脚本列表
 
 ### 1. `configure-rime-ice.sh` - Linux版本
 - **适用系统**: Linux (Ubuntu/Debian等)
-- **输入法框架**: ibus-rime
+- **输入法框架**: ==ibus-rime== 注意：如果用户用的是fcitx5-rime，只能用`configure-rime-ice.sh`，且需要手动修改脚本中的rime设置路径，改成`$HOME/.local/share/fcitx5/rime/`，注释里有提示
 - **配置目录**: `~/.config/ibus/rime/`
 
 ### 2. `configure-rime-ice-macos.sh` - macOS版本
@@ -19,13 +19,13 @@
 - **输入法框架**: 小狼毫(Weasel)
 - **配置目录**: `%APPDATA%\Rime\`
 
-### 4. `configure-rime-ice-universal.sh` - 通用版本 ⭐
-- **适用系统**: Linux + macOS + Windows
+### 4. `configure-rime-ice-universal.sh` - 通用版本
+- **适用系统**: Linux（用ibus框架的可以，用fcitx5别用通用脚本用`configure-rime-ice.sh`） + macOS + Windows（windows如果没有用msys2，无法运行sh，直接用bat就好了）
 - **输入法框架**: 自动检测 (ibus-rime / Squirrel / Weasel)
 - **配置目录**: 自动检测
 - **推荐使用**: 此脚本可以自动检测系统类型并选择相应的配置方式
 
-## 功能特性
+## 二、功能特性
 
 - **智能检测**：自动检测rime-ice是否已配置
 - **安全更新**：保护用户自定义的配置文件
@@ -41,9 +41,10 @@
 - `squirrel.yaml` 
 - `weasel.yaml`
 
-## 快速开始
+个人设置都在这三个文件里，linux和windows用`default.yaml`和`weasel.yaml`，macos用`default.yaml`和weasel.yaml`。
+## 三、快速开始
 
-### 推荐方式（通用脚本）
+### 推荐方式（通用脚本 linux和macos用户用，windows用户用bat脚本）
 ```bash
 # 下载并运行通用脚本
 ./configure-rime-ice-universal.sh
@@ -61,12 +62,12 @@
 configure-rime-ice-windows-simple.bat
 ```
 
-## 系统要求
+## 四、系统要求
 
 ### Linux系统
 - Linux发行版 (推荐Ubuntu/Debian)
 - GNOME桌面环境
-- 已安装ibus-rime
+- 已安装ibus-rime。
 - 已安装git
 
 ### macOS系统
@@ -79,7 +80,7 @@ configure-rime-ice-windows-simple.bat
 - 已安装小狼毫(Weasel)输入法
 - 已安装git
 
-## 安装输入法框架
+## 五、安装输入法框架
 
 ### Linux - 安装ibus-rime
 ```bash
@@ -125,7 +126,7 @@ ibus-setup
 5. 恢复受保护的用户文件
 6. 重新加载输入法
 
-## 故障排除
+## 六、故障排除
 
 ### 常见问题
 
@@ -176,7 +177,7 @@ rime-ice-update/
 ├── configure-rime-ice.sh              # Linux版本
 ├── configure-rime-ice-macos.sh         # macOS版本
 ├── configure-rime-ice-windows-simple.bat # Windows版本
-├── configure-rime-ice-universal.sh     # 通用版本 ⭐
+├── configure-rime-ice-universal.sh     # 通用版本 
 ├── README.md                           # 总体说明
 ├── README-macos.md                    # macOS详细说明
 └── README-windows.md                  # Windows详细说明
