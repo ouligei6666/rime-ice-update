@@ -1,3 +1,6 @@
+# 废弃
+直接clone ice-rime的仓库，用git pull更新，更方便
+
 # Rime-Ice 配置脚本集合
 
 这是一套用于在不同操作系统上配置rime-ice输入法的自动化脚本集合。
